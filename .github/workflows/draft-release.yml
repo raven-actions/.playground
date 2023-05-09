@@ -10,4 +10,4 @@ on:
 jobs:
   draft-release:
     name: Draft Release
-    uses: raven-actions/.workflows/.github/workflows/draft-release.yml@main
+    uses: raven-actions/.workflows/.github/workflows/release-draft.yml@main
