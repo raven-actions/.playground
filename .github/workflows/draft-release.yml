@@ -11,3 +11,4 @@ jobs:
   draft-release:
     name: Draft Release
     uses: raven-actions/.workflows/.github/workflows/release-draft.yml@main
+    secrets: inherit
