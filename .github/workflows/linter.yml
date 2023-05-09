@@ -1,5 +1,5 @@
 ---
-name: Lint
+name: Linter
 
 on:
   pull_request:
@@ -17,7 +17,7 @@ on:
       - main
 
 jobs:
-  lint:
-    name: Lint
-    uses: raven-actions/.workflows/.github/workflows/__lint.yml@main
+  linter:
+    name: Linter
+    uses: raven-actions/.workflows/.github/workflows/__linter.yml@main
     secrets: inherit
