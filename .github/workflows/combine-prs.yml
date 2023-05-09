@@ -1,0 +1,13 @@
+---
+name: Combine PRs (dependabot)
+
+on:
+  schedule:
+    - cron: "30 2 * * *"
+  workflow_dispatch:
+
+jobs:
+  combine-prs:
+    name: Combine PRs
+    uses: raven-actions/.workflows/.github/workflows/__combine-prs.yml@main
+    secrets: inherit
