@@ -1,0 +1,13 @@
+---
+name: Draft Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  draft-release:
+    name: Draft Release
+    uses: raven-actions/.workflows/.github/workflows/draft-release.yml@main
