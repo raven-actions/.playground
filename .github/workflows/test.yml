@@ -1,0 +1,19 @@
+name: __TEST
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          echo "${{ (env.FOO == 'bar' && 'macos-latest') || 'ubuntu-latest' }}"
+          echo "${{ (env.FOO == 'foo' && 'macos-latest') || 'ubuntu-latest' }}"
+        env:
+          FOO: bar
