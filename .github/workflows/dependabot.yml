@@ -1,0 +1,12 @@
+---
+name: Dependabot
+
+on:
+  pull_request_target:
+  workflow_dispatch:
+
+jobs:
+  dependabot:
+    name: Dependabot
+    uses: raven-actions/.workflows/.github/workflows/__dependabot.yml@main
+    secrets: inherit
