@@ -7,11 +7,9 @@ on:
       - main
     types:
       - opened
-      - converted_to_draft
       - ready_for_review
       - synchronize
       - reopened
-      - closed
   push:
     branches:
       - main
