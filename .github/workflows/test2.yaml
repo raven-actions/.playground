@@ -1,0 +1,20 @@
+
+# yaml-language-server: $schema=https://www.schemastore.org/github-workflow.json
+---
+name: Tests2
+
+on:
+  pull_request:
+    branches:
+      - main
+      - features/*
+      - release/*
+
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-latest
+    environment: test
+    steps:
+      - name: Hello
+        run: echo 1
