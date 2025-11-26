@@ -12,7 +12,7 @@ on:
 
 jobs:
   setup:
-    # name: Setup
+    name: Test Run
     runs-on: ubuntu-latest
     environment: test
     # permissions:
