@@ -1,7 +1,7 @@
 
 # yaml-language-server: $schema=https://www.schemastore.org/github-workflow.json
 ---
-name: Tests
+name: Tests1
 
 on:
   pull_request_target:
