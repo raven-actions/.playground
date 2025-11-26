@@ -15,6 +15,20 @@ jobs:
     name: Setup
     runs-on: ubuntu-latest
     environment: test
+    permissions:
+      checks: write
+      # contents: read
     steps:
       - name: Hello
         run: echo 1
+
+      - uses: LouisBrunner/checks-action@6b626ffbad7cc56fd58627f774b9067e6118af23 # v2.0.0
+        with:
+          token: ${{ github.token }}
+          name: Test Run
+          conclusion: ${{ job.status }}
+          output: |
+            {"summary":"Functional Test run completed. See links for more information.","title":"Functional Test Run"}
+          details_url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+      
