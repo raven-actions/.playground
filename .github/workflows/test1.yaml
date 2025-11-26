@@ -26,6 +26,7 @@ jobs:
         with:
           token: ${{ github.token }}
           name: Test Run
+          status: completed
           conclusion: ${{ job.status }}
           output: |
             {"summary":"Functional Test run completed. See links for more information.","title":"Functional Test Run"}
